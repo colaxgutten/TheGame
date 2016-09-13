@@ -1,4 +1,5 @@
+import javafx.application.Application;
 
-public class MainWindow {
-
+public class MainWindow extends Application {
+	
 }
