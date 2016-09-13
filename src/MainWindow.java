@@ -13,16 +13,4 @@ public class MainWindow extends Application {
 		
 		ss.init(stage);
 	}
-	
-	public void startGame(String saveName) {
-		Game game;
-		
-		if(saveName.equals("")) {
-			game = GameLoader.newGame();
-		} else {
-			game = GameLoader.load(saveName);
-		}
-		
-		new GameLoop(stage, game).start();
-	}
 }
