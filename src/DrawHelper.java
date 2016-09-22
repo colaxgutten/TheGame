@@ -22,10 +22,9 @@ class DrawHelper {
 	}
 	
 	private void drawGame(Game game) {
-		Image img =new Image(game.getTiles());
 		for (int i =0; i<numOfXTiles;i++){
 			for (int j = 0; j<numOfYTiles;j++){
-				gc.drawImage(img, i*tileSize, j*tileSize,tileSize,tileSize);
+				gc.fillRect(i*tileSize, j*tileSize,tileSize,tileSize);
 			}
 		}
 	}
