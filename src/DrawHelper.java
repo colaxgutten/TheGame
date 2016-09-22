@@ -13,7 +13,7 @@ class DrawHelper {
 	private int tileSize = 48;
 	
 	public DrawHelper(Stage stage) {
-		Canvas canvas = new Canvas();
+		Canvas canvas = new Canvas(700,700);
 		gc = canvas.getGraphicsContext2D();
 		Pane pane = new Pane();
 		pane.getChildren().add(canvas);

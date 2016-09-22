@@ -12,8 +12,10 @@ public class StartScreen {
 	public void init(Stage stage, GameLoop loop) {
 		this.stage = stage;
 		
-		Pane pane = new Pane();		
+		Pane pane = new Pane();	
+		pane.setPrefSize(720, 720);
 		Button b = new Button();
+		b.setText("Start Game");
 		b.setOnMouseClicked(e -> {
 			startGame(saveName, loop);
 		});

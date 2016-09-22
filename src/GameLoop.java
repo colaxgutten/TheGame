@@ -29,6 +29,11 @@ class GameLoop extends AnimationTimer {
 	@Override
 	public void handle(long arg0) {
 		dh.draw(game);
-		
+	}
+	
+	public void stop(){
+		super.stop();
+		StartScreen ss = new StartScreen();
+		ss.init(stage, this);
 	}
 }
