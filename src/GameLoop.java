@@ -7,6 +7,7 @@ import javafx.stage.Stage;
 class GameLoop extends AnimationTimer {
 	DrawHelper dh;
 	Game game;
+	Stage stage;
 	/*
 	public GameLoop(Stage stage, Game game) {
 		Canvas canvas = new Canvas();
@@ -17,8 +18,9 @@ class GameLoop extends AnimationTimer {
 		this.game = game;
 	}
 	*/
-	public void start(Game game) {
+	public void start(Stage stage, Game game) {
 		super.start();
+		this.stage=stage;
 		this.game = game;
 	}
 	

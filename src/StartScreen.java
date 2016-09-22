@@ -25,6 +25,6 @@ public class StartScreen {
 			game = GameLoader.load(saveName);
 		}
 		
-		loop.start(game);
+		loop.start(stage,game);
 	}
 }
