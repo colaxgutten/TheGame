@@ -5,6 +5,6 @@ public class GameLoader {
 	} 
 	
 	public static Game newGame() {
-		return null;
+		return new Game();
 	}
 }
