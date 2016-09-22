@@ -35,6 +35,8 @@ class GameLoop extends AnimationTimer implements KeyListener{
 		createCanvas();
 		dh = new DrawHelper(canvas);
 		
+		new KeyboardHandler(canvas, game, this);
+		
 		
 		super.start();
 	}
