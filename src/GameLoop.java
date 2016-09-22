@@ -11,6 +11,7 @@ class GameLoop extends AnimationTimer implements KeyListener{
 	DrawHelper dh;
 	Game game;
 	Stage stage;
+	Canvas canvas;
 	/*
 	public GameLoop(Stage stage, Game game) {
 		Canvas canvas = new Canvas();
@@ -21,10 +22,19 @@ class GameLoop extends AnimationTimer implements KeyListener{
 		this.game = game;
 	}
 	*/
+	private void createCanvas() {
+		canvas = new Canvas(700, 700);
+		Pane pane = new Pane(canvas);
+		Scene scene = new Scene(pane);
+		stage.setScene(scene);
+	}
+	
 	public void start(Stage stage, Game game) {
-		this.stage=stage;
-		dh = new DrawHelper(stage);
 		this.game = game;
+		this.stage=stage;
+		createCanvas();
+		dh = new DrawHelper(canvas);
+		
 		
 		super.start();
 	}

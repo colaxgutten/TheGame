@@ -15,13 +15,8 @@ class DrawHelper {
 	private int numOfYTiles = 16;
 	private int tileSize = 48;
 	
-	public DrawHelper(Stage stage) {
-		Canvas canvas = new Canvas(700,700);
+	public DrawHelper(Canvas canvas) {
 		gc = canvas.getGraphicsContext2D();
-		Pane pane = new Pane();
-		pane.getChildren().add(canvas);
-		Scene scene = new Scene(pane);
-		stage.setScene(scene);
 		canvas.setFocusTraversable(true);
 	}
 	
@@ -29,7 +24,6 @@ class DrawHelper {
 		for (int i =0; i<numOfXTiles;i++){
 			for (int j = 0; j<numOfYTiles;j++){
 				gc.fillRect(i*tileSize, j*tileSize,tileSize,tileSize);
-				System.out.println("kake");
 			
 			}
 		}
