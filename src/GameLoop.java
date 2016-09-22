@@ -19,14 +19,16 @@ class GameLoop extends AnimationTimer {
 	}
 	*/
 	public void start(Stage stage, Game game) {
-		super.start();
 		this.stage=stage;
+		dh = new DrawHelper(stage);
 		this.game = game;
+		
+		super.start();
 	}
 	
 	@Override
 	public void handle(long arg0) {
-		
+		dh.draw(game);
 		
 	}
 }

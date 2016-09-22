@@ -12,8 +12,9 @@ class DrawHelper {
 	private int numOfYTiles = 16;
 	private int tileSize = 48;
 	
-	public DrawHelper(GraphicsContext gc, Stage stage) {
+	public DrawHelper(Stage stage) {
 		Canvas canvas = new Canvas();
+		gc = canvas.getGraphicsContext2D();
 		Pane pane = new Pane();
 		pane.getChildren().add(canvas);
 		Scene scene = new Scene(pane);
