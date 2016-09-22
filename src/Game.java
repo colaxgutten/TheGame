@@ -6,4 +6,9 @@ public class Game {
 		
 	}
 
+	public HUD getHUD() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

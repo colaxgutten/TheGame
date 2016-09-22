@@ -17,8 +17,12 @@ class DrawHelper {
 	*/	
 	}
 	
-	public static void draw(Game game) {
-//		drawGame(game);
-//		drawHUD(game.getHUD());
+	public void draw(Game game) {
+		drawGame(game);
+		drawHUD(game.getHUD());
 	} 
+	
+	private void drawHUD(HUD hud){
+		
+	}
 }
