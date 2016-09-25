@@ -10,6 +10,7 @@ public abstract class Animatable {
 	private int y;
 	
 	public String getImageString(long currentTime){
+		if(currentAnimation == null) return "";
 		return animations.get(currentAnimation).getFrame(currentTime);
 	}
 	
