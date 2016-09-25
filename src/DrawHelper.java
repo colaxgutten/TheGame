@@ -1,5 +1,6 @@
 import java.util.Random;
 
+
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
@@ -20,7 +21,12 @@ class DrawHelper {
 		canvas.setFocusTraversable(true);
 	}
 	
-	private void drawGame(Game game) {
+	private void drawGame(Game game,long time) {
+		
+		for (Animatable a : game.getAnimatables()){
+			gc.drawImage(ImageLoader.getInstance().getImage(a.getImageString(time)),a.getX(),a.getY());
+		}
+		
 		for (int i =0; i<numOfXTiles;i++){
 			for (int j = 0; j<numOfYTiles;j++){
 				gc.fillRect(i*tileSize, j*tileSize,tileSize,tileSize);
@@ -29,8 +35,8 @@ class DrawHelper {
 		}
 	}
 	
-	public void draw(Game game) {
-		drawGame(game);
+	public void draw(Game game,long time) {
+		drawGame(game,time);
 		drawHUD(game.getHUD());
 	} 
 	

@@ -7,7 +7,7 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
-class GameLoop extends AnimationTimer implements KeyListener{
+class GameLoop extends AnimationTimer {
 	DrawHelper dh;
 	Game game;
 	Stage stage;
@@ -42,8 +42,8 @@ class GameLoop extends AnimationTimer implements KeyListener{
 	}
 	
 	@Override
-	public void handle(long arg0) {
-		dh.draw(game);
+	public void handle(long time) {
+		dh.draw(game,time);
 	}
 	
 	public void stop(){
@@ -52,23 +52,4 @@ class GameLoop extends AnimationTimer implements KeyListener{
 		ss.init(stage, this, game.getSettings());
 	}
 
-	@Override
-	public void keyTyped(KeyEvent e) {
-		while (true){
-			System.out.println("hei");
-		}
-		
-	}
-
-	@Override
-	public void keyPressed(KeyEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void keyReleased(KeyEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
 }

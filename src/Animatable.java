@@ -40,4 +40,12 @@ public abstract class Animatable {
 			animations.remove(name);
 	}
 	
+	public int getX(){
+		return x;
+	}
+	
+	public int getY(){
+		return y;
+	}
+	
 }

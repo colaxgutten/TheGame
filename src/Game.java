@@ -1,7 +1,10 @@
+import java.util.List;
+
 import javafx.scene.image.Image;
 
 public class Game {
 	private Settings settings;
+	private List<Animatable> animatables;
 	
 	public String getTiles(){
 		return "C:\\Users\\Daniel\\workspace\\TileMapEditor\\images\\tileImages\\runite.jpg";
@@ -15,6 +18,10 @@ public class Game {
 	public HUD getHUD() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+	
+	public List<Animatable> getAnimatables(){
+		return this.animatables;
 	}
 
 	public Settings getSettings() {
