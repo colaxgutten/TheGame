@@ -17,7 +17,7 @@ public class ImageLoader {
 	}
 	
 	public void loadFolder(String folderName) {
-		Image img = new Image("C:\\Users\\Eirik\\git\\TheGame\\src\\images\\sprite.png");
+		Image img = new Image("src\\images\\sprite.png");
 		images.put("a", img);
 	}
 	
