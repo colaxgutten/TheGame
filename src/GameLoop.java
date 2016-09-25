@@ -49,7 +49,7 @@ class GameLoop extends AnimationTimer implements KeyListener{
 	public void stop(){
 		super.stop();
 		StartScreen ss = new StartScreen();
-		ss.init(stage, this);
+		ss.init(stage, this, game.getSettings());
 	}
 
 	@Override

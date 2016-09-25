@@ -13,10 +13,12 @@ public class MainWindow extends Application {
 	@Override
 	public void start(Stage stage) {
 		this.stage = stage;
+		
+		Settings settings = Settings.load("s.txt");
 		loop = new GameLoop();
 		
 		StartScreen ss = new StartScreen();
 		
-		ss.init(stage,loop);
+		ss.init(stage,loop, settings);
 	}
 }

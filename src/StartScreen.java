@@ -8,9 +8,11 @@ import javafx.stage.Stage;
 public class StartScreen {
 	String saveName;
 	Stage stage;
+	Settings settings;
 	
-	public void init(Stage stage, GameLoop loop) {
+	public void init(Stage stage, GameLoop loop, Settings settings) {
 		this.stage = stage;
+		this.settings = settings;
 		
 		Pane pane = new Pane();	
 		pane.setPrefSize(720, 720);
@@ -33,6 +35,9 @@ public class StartScreen {
 		} else {
 			game = GameLoader.load(saveName);
 		}
+		
+		game.setSettings(settings);
+		
 		loop.start(stage,game);
 	}
 }
