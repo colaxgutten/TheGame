@@ -21,7 +21,7 @@ public class ImageLoader {
 	public void loadFolder(String folderName) {
 		Image img;
 		try{
-			File f = new File("C:\\Users\\Eirik\\git\\TheGame\\src\\images\\sprite.png");
+			File f = new File("src\\images\\sprite.png");
 			
 			img = new Image(f.toURI().toURL().toString());
 			images.put("a", img);
