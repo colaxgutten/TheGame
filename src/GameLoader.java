@@ -19,7 +19,6 @@ public class GameLoader {
 		ArrayList<Animatable> animatables = new ArrayList<Animatable>();
 		animatables.add(dec);
 		
-		dec.setCurrentAnimation("f", System.currentTimeMillis());
 		
 		game.setAnimatables(animatables);
 		
