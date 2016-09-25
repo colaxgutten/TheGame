@@ -1,3 +1,5 @@
+import java.io.File;
+import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -17,8 +19,15 @@ public class ImageLoader {
 	}
 	
 	public void loadFolder(String folderName) {
-		Image img = new Image("src\\images\\sprite.png");
-		images.put("a", img);
+		Image img;
+		try{
+			File f = new File("C:\\Users\\Eirik\\git\\TheGame\\src\\images\\sprite.png");
+			
+			img = new Image(f.toURI().toURL().toString());
+			images.put("a", img);
+		} catch(Exception e) {
+			System.out.println("err");
+		}
 	}
 	
 	public Image getImage(String name) {

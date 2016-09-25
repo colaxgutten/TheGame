@@ -5,12 +5,12 @@ import java.util.List;
 
 public abstract class Animatable {
 	private HashMap<String, Animation> animations;
-	private Animation currentAnimation;
+	private String currentAnimation;
 	private int x;
 	private int y;
 	
 	public String getImageString(long currentTime){
-		return currentAnimation.getFrame(currentTime);
+		return animations.get(currentAnimation).getFrame(currentTime);
 	}
 	
 	public Animatable(){
@@ -31,8 +31,9 @@ public abstract class Animatable {
 		animations.put(name,a);
 	}
 	
-	public void setCurrentAnimation (Animation a){
+	public void setCurrentAnimation (String a, long currentTime){
 		this.currentAnimation=a;
+		animations.get(currentAnimation).start(currentTime);
 	}
 	
 	public void removeAnimation(String name){

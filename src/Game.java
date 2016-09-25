@@ -20,6 +20,10 @@ public class Game {
 		return null;
 	}
 	
+	public void setAnimatables(List<Animatable> anims) {
+		this.animatables = anims;
+	}
+	
 	public List<Animatable> getAnimatables(){
 		return this.animatables;
 	}

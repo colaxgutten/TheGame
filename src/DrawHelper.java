@@ -27,12 +27,12 @@ class DrawHelper {
 			gc.drawImage(ImageLoader.getInstance().getImage(a.getImageString(time)),a.getX(),a.getY());
 		}
 		
-		for (int i =0; i<numOfXTiles;i++){
+		/*for (int i =0; i<numOfXTiles;i++){
 			for (int j = 0; j<numOfYTiles;j++){
 				gc.fillRect(i*tileSize, j*tileSize,tileSize,tileSize);
 			
 			}
-		}
+		}*/
 	}
 	
 	public void draw(Game game,long time) {
