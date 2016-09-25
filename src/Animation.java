@@ -26,13 +26,11 @@ public class Animation {
 		
 		long curTime = (time - startTime) % runTime;
 		
-		int totalTime = 0;
+		long totalTime = 0;
 		
 		for(int i = 0; i < frames.size(); i++) {
 			totalTime += frames.get(i).delay;
 			if(totalTime > curTime) {
-				System.out.println(i);
-				System.out.println(curTime);
 				return frames.get(i).name;
 				
 			}
@@ -43,9 +41,9 @@ public class Animation {
 	
 	public static Animation fromString(String str) {
 		List<AnimationImage> frames = new ArrayList<>();
-		frames.add(new AnimationImage("a", 1000));
-		frames.add(new AnimationImage("b",3000));
-		frames.add(new AnimationImage("c",300));
+		frames.add(new AnimationImage("a",1000));
+		frames.add(new AnimationImage("b",1000));
+		frames.add(new AnimationImage("c",1000));
 		
 		return new Animation(frames);
 	}

@@ -23,6 +23,7 @@ class DrawHelper {
 	
 	private void drawGame(Game game,long time) {
 		
+		
 		for (Animatable a : game.getAnimatables()){
 			gc.drawImage(ImageLoader.getInstance().getImage(a.getImageString(time)),a.getX(),a.getY());
 		}

@@ -43,7 +43,7 @@ class GameLoop extends AnimationTimer {
 	
 	@Override
 	public void handle(long time) {
-		dh.draw(game,time);
+		dh.draw(game,System.currentTimeMillis());
 	}
 	
 	public void stop(){
