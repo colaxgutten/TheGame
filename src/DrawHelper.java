@@ -36,6 +36,7 @@ class DrawHelper {
 	}
 	
 	public void draw(Game game,long time) {
+		gc.clearRect(0, 0, 720, 720);
 		drawGame(game,time);
 		drawHUD(game.getHUD());
 	} 
