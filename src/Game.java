@@ -22,7 +22,9 @@ public class Game {
 	}
 
 	public void update(long time) {
+		tiles.update(time);
 		player.update(time);
+		camera.update(player);
 	}
 
 	public HUD getHUD() {

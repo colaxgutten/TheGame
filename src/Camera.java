@@ -44,7 +44,13 @@ public class Camera {
 	}
 	
 	public int getTilesOff(){
-		return tilesWidth/2;
+		return tilesWidth/2-1;
+	}
+
+	public void update(Player player) {
+		this.x=player.getPos().getX();
+		this.y=player.getPos().getY();
+		
 	}
 	
 }

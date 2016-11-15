@@ -116,4 +116,8 @@ public class TileMap {
 		}
 		return save;
 	}
+
+	public void update(long time) {
+		
+	}
 }

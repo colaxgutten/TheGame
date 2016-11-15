@@ -50,7 +50,7 @@ class DrawHelper {
 		}
 		
 		Player f = (Player)game.getPlayer();
-		gc.drawImage(ImageLoader.getInstance().getImage(f.getImageString(time)),f.getPos().getX() * tileSize, f.getPos().getY() * tileSize);
+		gc.drawImage(ImageLoader.getInstance().getImage(f.getImageString(time)), (f.getPos().getX()+cam.getTilesOff()-cam.getX())*tileSize, (f.getPos().getY()+cam.getTilesOff()-cam.getY())*tileSize);
 
 		/*for (int i =0; i<numOfXTiles;i++){
 			for (int j = 0; j<numOfYTiles;j++){
