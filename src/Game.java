@@ -7,6 +7,7 @@ public class Game {
 	private List<Animatable> animatables;
 	private TileMap tiles;
 	private Camera camera;
+	private Player player;
 	
 	public void setCamera(Camera camera){
 		this.camera=camera;
@@ -20,9 +21,8 @@ public class Game {
 		return tiles;
 	}
 
-	public void update() {
-		// TODO Auto-generated method stub
-		
+	public void update(long time) {
+		player.update(time);
 	}
 
 	public HUD getHUD() {
@@ -44,6 +44,14 @@ public class Game {
 
 	public void setSettings(Settings settings) {
 		this.settings = settings;
+	}
+	
+	public void setPlayer(Player player) {
+		this.player = player;
+	}
+	
+	public Player getPlayer() {
+		return this.player;
 	}
 
 	public void setTiles(TileMap t) {

@@ -12,7 +12,8 @@ public class KeyboardHandler {
 		bindings = game.getSettings().getKeyBindings(); 
 				
 		canvas.setOnKeyPressed(e -> {
-			game.getAnimatables().get(0).setCurrentAnimation("f", System.currentTimeMillis());
+			//game.getAnimatables().get(0).setCurrentAnimation("f", System.currentTimeMillis());
+			game.getPlayer().walkLeft(System.currentTimeMillis());
 		});
 	}
 	
