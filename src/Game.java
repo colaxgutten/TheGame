@@ -6,6 +6,15 @@ public class Game {
 	private Settings settings;
 	private List<Animatable> animatables;
 	private TileMap tiles;
+	private Camera camera;
+	
+	public void setCamera(Camera camera){
+		this.camera=camera;
+	}
+	
+	public Camera getCamera(){
+		return camera;
+	}
 	
 	public TileMap getTiles(){
 		return tiles;

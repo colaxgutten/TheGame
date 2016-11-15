@@ -14,7 +14,6 @@ public abstract class Animatable {
 			return "";
 		}
 		else if (animations!=null){
-			System.out.println("Trying to return getFrame");
 		return animations.get(currentAnimation).getFrame(currentTime);
 		}
 		System.out.println("HashMap<String, Animation> is null");

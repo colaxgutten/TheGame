@@ -15,9 +15,11 @@ public class GameLoader {
 
 		ArrayList<Animatable> animatables = new ArrayList<Animatable>();
 		MapLoader ml = new MapLoader();
+		Camera camera = new Camera();
 		ml.loadMap("src\\saveFile.txt");
 		TileMap t = ml.getTileMap();
 		game.setTiles(t);
+		game.setCamera(camera);
 		System.out.println(animatables.size());
 		addAllTiles(t,animatables);
 		game.setAnimatables(animatables);
@@ -32,7 +34,5 @@ public class GameLoader {
 		  Point key = (Point)thisEntry.getKey();
 		  Tile value = (Tile)thisEntry.getValue();
 		}
-		
 	}
-	
 }
