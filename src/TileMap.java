@@ -27,6 +27,18 @@ public class TileMap {
 	public void setTile(Point pos, Tile tile){
 		grid.put(pos, tile);
 	}
+	
+	public Map<Point, Tile> getMap(){
+		return grid;
+	}
+	
+	public void startAnimations(long currentTime){
+		for (Entry e : grid.entrySet()){
+			Tile t = (Tile)e.getValue();
+			String s = t.getTileImageId();
+			t.setCurrentAnimation(s, currentTime);
+		}
+	}
 
 	public Tile getTile(Point pos) {
 		if(!grid.containsKey(pos)) {

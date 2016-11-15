@@ -1,3 +1,5 @@
+import java.awt.Point;
+import java.util.Map.Entry;
 import java.util.Random;
 
 
@@ -22,10 +24,17 @@ class DrawHelper {
 	}
 	
 	private void drawGame(Game game,long time) {
-		for (Animatable a : game.getAnimatables()){
-			gc.drawImage(ImageLoader.getInstance().getImage(a.getImageString(time)),a.getX(),a.getY());
+		for (Entry e : game.getTiles().getMap().entrySet()){
+			Tile t = (Tile)e.getValue();
+			Point p =(Point) e.getKey();
+			Image im = ImageLoader.getInstance().getImage(t.getTileImageId());
+			gc.drawImage(im, p.getX()*tileSize, p.getY()*tileSize,tileSize,tileSize);
 		}
-		
+//		for (Animatable a : game.getAnimatables()){
+//			int x = a.getX()*tileSize;
+//			int y = a.getY()*tileSize;
+//			gc.drawImage(ImageLoader.getInstance().getImage(a.getImageString(time)),x,y,tileSize,tileSize);
+//		}
 		/*for (int i =0; i<numOfXTiles;i++){
 			for (int j = 0; j<numOfYTiles;j++){
 				gc.fillRect(i*tileSize, j*tileSize,tileSize,tileSize);

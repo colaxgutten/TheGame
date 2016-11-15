@@ -22,6 +22,7 @@ public class Tile extends Animatable implements TileInterface {
 	 * @param solid
 	 */
 	public Tile(String[] params, String tileImageName, boolean solid){
+		super(Helper.getSingleAnimation(tileImageName));
 		this.params = params;
 		this.tileImageName=tileImageName;
 		this.solid=solid;
