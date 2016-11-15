@@ -41,10 +41,7 @@ public class Animation {
 	
 	public static Animation fromString(String str) {
 		List<AnimationImage> frames = new ArrayList<>();
-		frames.add(new AnimationImage("a",1000));
-		frames.add(new AnimationImage("b",1000));
-		frames.add(new AnimationImage("c",1000));
-		
+		frames.add(new AnimationImage(str,1000));	
 		return new Animation(frames);
 	}
 }

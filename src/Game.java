@@ -5,9 +5,19 @@ import javafx.scene.image.Image;
 public class Game {
 	private Settings settings;
 	private List<Animatable> animatables;
+	private TileMap tiles;
+	private Camera camera;
 	
-	public String getTiles(){
-		return "C:\\Users\\Daniel\\workspace\\TileMapEditor\\images\\tileImages\\runite.jpg";
+	public void setCamera(Camera camera){
+		this.camera=camera;
+	}
+	
+	public Camera getCamera(){
+		return camera;
+	}
+	
+	public TileMap getTiles(){
+		return tiles;
 	}
 
 	public void update() {
@@ -34,6 +44,11 @@ public class Game {
 
 	public void setSettings(Settings settings) {
 		this.settings = settings;
+	}
+
+	public void setTiles(TileMap t) {
+		this.tiles=t;
+		
 	}
 
 }

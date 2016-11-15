@@ -6,5 +6,10 @@
 			<accessrule kind="accessible" pattern="**/**"/>
 		</accessrules>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/Daniel/Desktop/JDOM/jdom-2.0.6.jar" sourcepath="C:/Users/Daniel/Desktop/JDOM/jdom-2.0.6-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="file:/C:/Users/Daniel/Desktop/JDOM/"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
