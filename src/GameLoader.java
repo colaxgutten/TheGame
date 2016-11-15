@@ -29,7 +29,13 @@ public class GameLoader {
 		ArrayList<AnimationImage> imgs = new ArrayList<>();
 		imgs.add(new AnimationImage("c", 1000));
 		anim.put("walkLeft", new Animation(imgs));
+		anim.put("walkRight", new Animation(imgs));
+		anim.put("walkUp", new Animation(imgs));
+		anim.put("walkDown", new Animation(imgs));
 		anim.put("lookLeft", new Animation(imgs));
+		anim.put("lookRight", new Animation(imgs));
+		anim.put("lookUp", new Animation(imgs));
+		anim.put("lookDown", new Animation(imgs));
 		game.setPlayer(new Player(game, anim, 1, 1));
 		
 		return game;

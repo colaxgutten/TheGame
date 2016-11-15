@@ -23,6 +23,21 @@ public class Character extends Animatable {
 		this.walkDir = Dir.Left;
 	}
 	
+	public void walkRight(long time) {
+		this.setCurrentAnimation("walkRight", time);
+		this.walkDir = Dir.Right;
+	}
+	
+	public void walkUp(long time) {
+		this.setCurrentAnimation("walkUp", time);
+		this.walkDir = Dir.Up;
+	}
+	
+	public void walkDown(long time) {
+		this.setCurrentAnimation("walkDown", time);
+		this.walkDir = Dir.Down;
+	}
+	
 	public Point2D getPos() {
 		return truePos;
 	}
