@@ -21,6 +21,13 @@ public class GameLoader {
 		
 		
 		game.setAnimatables(animatables);
+
+		HashMap<String,Animation> anim = new HashMap<>();
+		ArrayList<AnimationImage> imgs = new ArrayList<>();
+		imgs.add(new AnimationImage("c", 1000));
+		anim.put("walkLeft", new Animation(imgs));
+		anim.put("lookLeft", new Animation(imgs));
+		game.setPlayer(new Player(game, anim, 1, 1));
 		
 		return game;
 	}

@@ -5,14 +5,14 @@ import javafx.scene.image.Image;
 public class Game {
 	private Settings settings;
 	private List<Animatable> animatables;
+	private Player player;
 	
 	public String getTiles(){
 		return "C:\\Users\\Daniel\\workspace\\TileMapEditor\\images\\tileImages\\runite.jpg";
 	}
 
-	public void update() {
-		// TODO Auto-generated method stub
-		
+	public void update(long time) {
+		player.update(time);
 	}
 
 	public HUD getHUD() {
@@ -34,6 +34,14 @@ public class Game {
 
 	public void setSettings(Settings settings) {
 		this.settings = settings;
+	}
+	
+	public void setPlayer(Player player) {
+		this.player = player;
+	}
+	
+	public Player getPlayer() {
+		return this.player;
 	}
 
 }

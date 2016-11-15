@@ -1,0 +1,4 @@
+<animationList>
+	<animation name="walkLeft1">
+		<image filename="walkLeft1_1" delay="300"></image>
+		<image filename="walkLeft1_2" delay="300"></image></animation></animationList>
