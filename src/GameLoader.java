@@ -31,9 +31,7 @@ public class GameLoader {
 		  Entry thisEntry = (Entry) entries.next();
 		  Point key = (Point)thisEntry.getKey();
 		  Tile value = (Tile)thisEntry.getValue();
-		 animatables.add(value);
 		}
-		t.startAnimations(System.currentTimeMillis());
 		
 	}
 	

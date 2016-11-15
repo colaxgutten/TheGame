@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class Tile extends Animatable implements TileInterface {
+public class Tile implements TileInterface {
 	private String tileImageName;
 	private String[] params;
 	private int toolId=0;
@@ -22,7 +22,6 @@ public class Tile extends Animatable implements TileInterface {
 	 * @param solid
 	 */
 	public Tile(String[] params, String tileImageName, boolean solid){
-		super(Helper.getSingleAnimation(tileImageName));
 		this.params = params;
 		this.tileImageName=tileImageName;
 		this.solid=solid;

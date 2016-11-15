@@ -39,8 +39,6 @@ public class MapLoader {
 					solid=true;
 				
 				Tile tile = Tile.getTile(type, params, tileImageId, solid);
-				tile.setX(posX);
-				tile.setY(posY);
 				tileMap.setTile(new Point(posX, posY), tile);
 			}
 			
@@ -92,19 +90,4 @@ public class MapLoader {
 		}
 	}
 	
-	public void test(){
-		for (int i = 0; i<16;i++){
-			for (int j = 0; j<16;j++){
-				Tile t = tileMap.getTile(new Point(i,j));
-				System.out.println(t.getTileImageId());
-				System.out.println(t.getX());
-				System.out.println(t.getY());
-				for (Decoration d : t.getDecorations()){
-					System.out.println(d.getX());
-					System.out.println(d.getY());
-					System.out.println(d.getImageString(System.currentTimeMillis()));
-				}
-			}
-		}
-	}
 }
