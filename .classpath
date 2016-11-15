@@ -6,6 +6,6 @@
 			<accessrule kind="accessible" pattern="**/**"/>
 		</accessrules>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Eirik/git/TheGame/jdom/jdom-2.0.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Daniel/Desktop/JDOM/jdom-2.0.6.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
