@@ -19,23 +19,31 @@ public class Character extends Animatable {
 	}
 	
 	public void walkLeft(long time) {
-		this.setCurrentAnimation("walkLeft", time);
-		this.walkDir = Dir.Left;
+		if(this.walkDir == null) {
+			this.setCurrentAnimation("walkLeft", time);
+			this.walkDir = Dir.Left;
+		}
 	}
 	
 	public void walkRight(long time) {
-		this.setCurrentAnimation("walkRight", time);
-		this.walkDir = Dir.Right;
+		if(this.walkDir == null) {
+			this.setCurrentAnimation("walkRight", time);
+			this.walkDir = Dir.Right;
+		}
 	}
 	
 	public void walkUp(long time) {
-		this.setCurrentAnimation("walkUp", time);
-		this.walkDir = Dir.Up;
+		if(this.walkDir == null) {
+			this.setCurrentAnimation("walkUp", time);
+			this.walkDir = Dir.Up;
+		}
 	}
 	
 	public void walkDown(long time) {
-		this.setCurrentAnimation("walkDown", time);
-		this.walkDir = Dir.Down;
+		if(this.walkDir == null) {
+			this.setCurrentAnimation("walkDown", time);
+			this.walkDir = Dir.Down;
+		}
 	}
 	
 	public Point2D getPos() {
