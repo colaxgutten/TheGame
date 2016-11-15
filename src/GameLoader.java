@@ -10,6 +10,7 @@ public class GameLoader {
 	} 
 	
 	public static Game newGame() {
+		System.out.println("Loading new game");
 		Game game = new Game();
 		ImageLoader.getInstance().loadFolder("s");
 

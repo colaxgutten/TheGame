@@ -1,7 +1,7 @@
 
 public class Camera {
-	private double x=9.0;
-	private double y=9.0;
+	private double x=8.0;
+	private double y=8.0;
 	private double zoom = 1;
 	private final int tilesWidth = 17;
 	private final int tilesHeigth = 17;

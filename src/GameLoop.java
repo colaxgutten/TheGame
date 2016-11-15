@@ -36,8 +36,6 @@ class GameLoop extends AnimationTimer {
 		dh = new DrawHelper(canvas);
 		
 		new KeyboardHandler(canvas, game, this);
-		
-		
 		super.start();
 	}
 	

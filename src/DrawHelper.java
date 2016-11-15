@@ -33,12 +33,10 @@ class DrawHelper {
 			gc.drawImage(im, ((p.getX()+cam.getTilesOff())-cam.getX())*tileSize, ((p.getY()+cam.getTilesOff())-cam.getY())*tileSize,tileSize,tileSize);
 			}
 		}
-
 		for (Entry e : game.getTiles().getMap().entrySet()){
 			Tile t = (Tile)e.getValue();
 			if (isWithinScreen((Point)e.getKey(),cam)){
 			if (t.getDecorations()!=null){
-				System.out.println("A decoration occured!!!!");
 				Point p =(Point) e.getKey();
 				for (Decoration d : t.getDecorations()){
 					Image im = ImageLoader.getInstance().getImage(d.getImageString(time));
@@ -50,9 +48,9 @@ class DrawHelper {
 			}
 			}
 		}
-
+		
 		Player f = (Player)game.getPlayer();
-		gc.drawImage(ImageLoader.getInstance().getImage(f.getImageString(time)),f.getPos().getX() * tileSize,f.getPos().getY() * tileSize);
+		gc.drawImage(ImageLoader.getInstance().getImage(f.getImageString(time)),f.getPos().getX() * tileSize, f.getPos().getY() * tileSize);
 		
 		/*for (int i =0; i<numOfXTiles;i++){
 			for (int j = 0; j<numOfYTiles;j++){
