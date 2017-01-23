@@ -27,7 +27,7 @@ class DrawHelper {
 	
 	private void drawGame(Game game,long time) {
 		Camera cam = game.getCamera();
-		for (Entry e : game.getTiles().getMap().entrySet()){
+		for (Entry<Point,Tile> e : game.getTiles().getMap().entrySet()){
 			Tile t = (Tile)e.getValue();
 			Point p =(Point) e.getKey();
 			if (isWithinScreen(p,cam)){
@@ -35,7 +35,7 @@ class DrawHelper {
 			gc.drawImage(im, ((p.getX()+cam.getTilesOff())-cam.getX())*tileSize, ((p.getY()+cam.getTilesOff())-cam.getY())*tileSize,tileSize,tileSize);
 			}
 		}
-		for (Entry e : game.getTiles().getMap().entrySet()){
+		for (Entry<Point,Tile> e : game.getTiles().getMap().entrySet()){
 			Tile t = (Tile)e.getValue();
 			if (isWithinScreen((Point)e.getKey(),cam)){
 			if (t.getDecorations()!=null){

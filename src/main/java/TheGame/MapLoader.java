@@ -14,7 +14,7 @@ public class MapLoader {
 	public void loadMap (String fileName){
 		System.out.println("Denne blir kallt");
 		File file = new File(fileName);
-		listOfOld = new ArrayList();
+		listOfOld = new ArrayList<>();
 		
 		try(FileReader fr = new FileReader(file)) {
 			BufferedReader br = new BufferedReader(fr);
@@ -77,8 +77,8 @@ public class MapLoader {
 	public void oldToNewDecorations(){
 		long time = System.currentTimeMillis();
 		for (DecorationOld d : listOfOld){
-			HashMap<String, Animation> anim = new HashMap();
-			ArrayList<AnimationImage> aiList = new ArrayList();
+			HashMap<String, Animation> anim = new HashMap<>();
+			ArrayList<AnimationImage> aiList = new ArrayList<>();
 			int x = d.getxPos();
 			int y = d.getyPos();
 			AnimationImage ai = new AnimationImage(d.getImageName(),1000);

@@ -49,9 +49,9 @@ public class GameLoader {
 	}
 
 	private static void addAllTiles(TileMap t, ArrayList<Animatable> animatables) {
-		Iterator entries = t.getMap().entrySet().iterator();
+		Iterator<Entry<Point,Tile>> entries = t.getMap().entrySet().iterator();
 		while (entries.hasNext()) {
-		  Entry thisEntry = (Entry) entries.next();
+		  Entry<Point,Tile> thisEntry = (Entry<Point,Tile>) entries.next();
 		  Point key = (Point)thisEntry.getKey();
 		  Tile value = (Tile)thisEntry.getValue();
 		}

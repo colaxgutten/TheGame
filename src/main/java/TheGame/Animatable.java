@@ -46,7 +46,7 @@ public abstract class Animatable {
 		if (animations!=null){
 		if (!animations.containsKey(a) && a!= null){
 			AnimationImage ai = new AnimationImage(a,1000);
-			ArrayList<AnimationImage> list = new ArrayList();
+			ArrayList<AnimationImage> list = new ArrayList<>();
 			list.add(ai);
 			Animation an = new Animation(list);
 		}
