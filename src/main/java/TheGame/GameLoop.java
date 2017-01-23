@@ -1,8 +1,5 @@
 package TheGame;
 
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-
 import javafx.animation.AnimationTimer;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
