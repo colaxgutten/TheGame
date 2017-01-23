@@ -22,22 +22,6 @@ public class Character extends Animatable {
 		this.speed = 1.0/100;
 	}
 	
-	public void walkLeft(long time) {
-	}
-	
-	public void walkRight(long time) {
-	}
-	
-	public void walkUp(long time) {
-	}
-	
-	public void walkDown(long time) {/*
-		if(this.walkDir == null) {
-			this.setCurrentAnimation("walkDown", time);
-			this.walkDir = Dir.Down;
-		}*/
-	}
-	
 	public Point2D getPos() {
 		return truePos;
 	}
