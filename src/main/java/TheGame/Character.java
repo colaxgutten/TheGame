@@ -26,13 +26,24 @@ public class Character extends Animatable {
 		return truePos;
 	}
 
-	public void walk(Dir dir) {
+	public void walk(Dir dir, long time) {
 		if(walkDir != null) {
 			stopAt = truePos;
 			nextDir = dir;
 		} else {
 			walkDir = dir;
 		}
+
+        switch(dir) {
+            case Left:
+                this.setCurrentAnimation("lookLeft", time);
+            case Right:
+                this.setCurrentAnimation("lookRight", time);
+            case Up:
+                this.setCurrentAnimation("lookUp", time);
+            case Down:
+                this.setCurrentAnimation("lookDown", time);
+        }
 	}
 
 	public void stop() {
