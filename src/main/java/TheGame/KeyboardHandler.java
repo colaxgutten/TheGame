@@ -18,16 +18,16 @@ public class KeyboardHandler {
 			//game.getAnimatables().get(0).setCurrentAnimation("f", System.currentTimeMillis());
 			switch(e.getCode()) {
 			case A:
-				game.getPlayer().walkLeft(time);
+				game.getPlayer().walk(Character.Dir.Left,time);
 				break;
 			case S:
-				game.getPlayer().walkDown(time);
+                game.getPlayer().walk(Character.Dir.Down,time);
 				break;
 			case D:
-				game.getPlayer().walkRight(time);
+				game.getPlayer().walk(Character.Dir.Right,time);
 				break;
 			case W:
-				game.getPlayer().walkUp(time);
+                game.getPlayer().walk(Character.Dir.Up,time);
 				break;
 			default:
 				break;
