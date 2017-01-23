@@ -14,7 +14,7 @@ public class Settings {
         map.put(KeyCode.RIGHT, KeyboardHandler.Action.MoveRight);
         map.put(KeyCode.S, KeyboardHandler.Action.MoveDown);
         map.put(KeyCode.DOWN, KeyboardHandler.Action.MoveDown);
-        map.put(KeyCode.E, KeyboardHandler.Action.MoveLeft);
+        map.put(KeyCode.A, KeyboardHandler.Action.MoveLeft);
         map.put(KeyCode.LEFT, KeyboardHandler.Action.MoveLeft);
 		return map;
 	}

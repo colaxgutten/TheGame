@@ -41,7 +41,6 @@ public abstract class Animatable {
 	
 	public void setCurrentAnimation (String a, long currentTime){
 		this.currentAnimation=a;
-		System.out.println(a);
 		if (animations!=null){
 		if (!animations.containsKey(a) && a!= null){
 			AnimationImage ai = new AnimationImage(a,1000);
