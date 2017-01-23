@@ -30,6 +30,8 @@ public class KeyboardHandler {
 			case W:
 				game.getPlayer().walkUp(time);
 				break;
+			default:
+				break;
 			}
 		});
 	}
