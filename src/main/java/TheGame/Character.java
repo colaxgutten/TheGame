@@ -27,7 +27,7 @@ public class Character extends Animatable {
 	}
 
 	public void walk(Dir dir, long time) {
-		if(walkDir != null) {
+		if(walkDir != null && walkDir != dir) {
 			stopAt = truePos;
 			nextDir = dir;
 		} else {
