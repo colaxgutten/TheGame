@@ -2,8 +2,6 @@ package TheGame;
 
 import java.util.List;
 
-import javafx.scene.image.Image;
-
 public class Game {
 	private Settings settings;
 	private List<Animatable> animatables;
